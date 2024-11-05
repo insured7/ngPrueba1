@@ -12,9 +12,9 @@ import { DetalleComponent } from "./detalle/detalle.component";
 })
 export class AppComponent {
   title = 'prueba1';
-  itemSelected: string = '';
+  itemSelected: object = {};
 
-  changeItem(item : string){
+  changeItem(item : object){
     this.itemSelected = item;
     console.log(item);
 

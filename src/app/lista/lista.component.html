@@ -3,7 +3,8 @@
   <h3>Listado de cosas</h3>
 
   <ul>
-    <li *ngFor="let item of cosas" (click) = "onSelect(item)">{{item}}</li>
+    <li *ngFor="let item of cosas" (click) = "onSelect(item)">{{item.name}}</li> <!--por cada item de
+    la lista crea un "li" y cada click muestra el metodo onSelect-->
   </ul>
 </div>
 

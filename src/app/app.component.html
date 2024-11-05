@@ -1,3 +1,3 @@
 <h2>{{title}}</h2>
 <app-lista (itemSelected)="changeItem($event)"></app-lista>
-<app-detalle></app-detalle>
+<app-detalle [item]="itemSelected"></app-detalle>

@@ -10,10 +10,19 @@ import { Component, EventEmitter, Output} from '@angular/core';
 })
 export class ListaComponent {
 
-  cosas = ['Silla', 'Ordenador', 'Mesa', 'Pantalla', 'Ratón', 'Teclado'];
-  @Output() itemSelected = new EventEmitter<string>();
 
-  onSelect(item: string){
+  cosas = [
+    {name:'Silla', precio: '25€'},
+    {name: 'Ordenador', precio: '245€'},
+    {name: 'Mesa', precio: '35€'},
+    {name: 'Pantalla', precio: '89€'},
+    {name: 'Ratón', precio: '14€'},
+    {name: 'Teclado', precio:'12€'}
+  ];
+
+  @Output() itemSelected = new EventEmitter<object>();
+
+  onSelect(item: object){
     this.itemSelected.emit(item);
   }
 }
